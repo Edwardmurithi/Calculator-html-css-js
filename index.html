@@ -10,39 +10,39 @@
     <div class="container">
         <div class="calculator">
             <div class="display">
-                <input type="text" id="display" placeholder="0" readonly>
+                <input type="text" id="display" value="0" placeholder="0" readonly>
             </div>
             <div>
-                <input type="button" value="AC" onclick="display.value = '' " class="bg-red">
-                <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0, -1) " class="bg-red">
-                <input type="button" value="%" onclick="display.value += '%' " class="bg-orange">
-                <input type="button" value="*" onclick="display.value += '*' " class="bg-orange">
+                <input type="button" value="AC" onclick="clearAllValues()" class="bg-red">
+                <input type="button" value="DE" onclick="deleteValue()" class="bg-red">
+                <input type="button" value="%" onclick="displayValue('%')" class="bg-orange">
+                <input type="button" value="*" onclick="displayValue('*')" class="bg-orange">
             </div>
             <div>
-                <input type="button" value="7" onclick="display.value += '7' ">
-                <input type="button" value="8" onclick="display.value += '8' ">
-                <input type="button" value="9" onclick="display.value += '9' ">
-                <input type="button" value="/" class="bg-orange" onclick="display.value += '/' ">
+                <input type="button" value="7" onclick="displayValue('7')">
+                <input type="button" value="8" onclick="displayValue('8')">
+                <input type="button" value="9" onclick="displayValue('9')">
+                <input type="button" value="/" onclick="displayValue('/')" class="bg-orange">
             </div>
             <div>
-                <input type="button" value="4" onclick="display.value += '4' ">
-                <input type="button" value="5" onclick="display.value += '5' ">
-                <input type="button" value="6" onclick="display.value += '6' ">
-                <input type="button" value="+" onclick="display.value += '+' " class="bg-orange">
+                <input type="button" value="4" onclick="displayValue('4')">
+                <input type="button" value="5" onclick="displayValue('5')">
+                <input type="button" value="6" onclick="displayValue('6')">
+                <input type="button" value="+" onclick="displayValue('+')" class="bg-orange">
             </div>
             <div>
-                <input type="button" value="1" onclick="display.value += '1' ">
-                <input type="button" value="2" onclick="display.value += '2' ">
-                <input type="button" value="3" onclick="display.value += '3' ">
-                <input type="button" value="-" onclick="display.value += '-' " class="bg-orange">
+                <input type="button" value="1" onclick="displayValue('1')">
+                <input type="button" value="2" onclick="displayValue('2')">
+                <input type="button" value="3" onclick="displayValue('3')">
+                <input type="button" value="-" onclick="displayValue('-')" class="bg-orange">
             </div>
             <div>
-                <input type="button" value="0" onclick="display.value += '0' ">
-                <input type="button" value="." onclick="display.value += '.' ">
-                <input type="button" value="=" onclick="display.value = eval(display.value)" class="equals bg-blue">
+                <input type="button" value="0" onclick="displayValue('0')">
+                <input type="button" value="." onclick="displayValue('.')">
+                <input type="button" value="=" onclick="calculate()" class="equals bg-blue">
             </div>
         </div>
     </div>
-    <script src="/assets/js/script.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
